@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-angular-nest-template/server/feature-work-item": [
+        "libs/server/feature-work-item/src/index.ts"
+      ],
       "@nx-angular-nest-template/server/util-common": [
         "libs/server/util-common/src/index.ts"
       ]

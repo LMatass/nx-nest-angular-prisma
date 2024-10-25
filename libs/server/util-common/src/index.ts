@@ -1,1 +1,1 @@
-export * from './lib/server-util-common.module';
+export * from './lib/prisma/';
