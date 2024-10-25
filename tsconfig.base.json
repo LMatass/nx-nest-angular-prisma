@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-angular-nest-template/server/util-common": [
+        "libs/server/util-common/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
