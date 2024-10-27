@@ -7,5 +7,6 @@ import { PrismaModule } from '@nx-angular-nest-template/server/util-common';
   controllers: [UsersController],
   providers: [UsersService],
   imports: [PrismaModule],
+  exports: [UsersService],
 })
 export class UsersModule {}
