@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-angular-nest-template/client/feature-authentication": [
+        "libs/client/feature-authentication/src/index.ts"
+      ],
       "@nx-angular-nest-template/server/core": [
         "libs/server/core/src/index.ts"
       ],
