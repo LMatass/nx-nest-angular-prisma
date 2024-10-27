@@ -6,6 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["omitApi"]
 }
 
 datasource db {
@@ -20,4 +21,16 @@ model WorkItem {
   status      String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  author      User?     @relation(fields: [authorId], references: [id])
+  authorId    Int?
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String?
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  WorkItem  WorkItem[]
 }

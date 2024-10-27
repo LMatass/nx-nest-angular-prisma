@@ -2,9 +2,10 @@ import { Module } from '@nestjs/common';
 import { APP_FILTER, HttpAdapterHost } from '@nestjs/core';
 import { PrismaClientExceptionFilter } from 'nestjs-prisma';
 import { ServerFeatureWorkItemModule } from '@nx-angular-nest-template/server/feature-work-item';
+import { ServerCoreModule } from '@nx-angular-nest-template/server/core';
 
 @Module({
-  imports: [ServerFeatureWorkItemModule],
+  imports: [ServerFeatureWorkItemModule, ServerCoreModule],
   controllers: [],
   providers: [
     {

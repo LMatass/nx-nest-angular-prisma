@@ -8,21 +8,17 @@ export class ServerFeatureWorkItemService {
   constructor(private prisma: PrismaService) {}
 
   create(createServerFeatureWorkItemDto: CreateServerFeatureWorkItemDto) {
-    if (!createServerFeatureWorkItemDto.title) {
-      throw new Error('Title is required');
-    }
-
-    if (!createServerFeatureWorkItemDto.status) {
-      throw new Error('Status is required');
-    }
-
     return this.prisma.workItem.create({
       data: createServerFeatureWorkItemDto,
     });
   }
 
   findAll() {
-    return this.prisma.workItem.findMany();
+    return this.prisma.workItem.findMany({
+      include: {
+        author: true,
+      },
+    });
   }
 
   update(
